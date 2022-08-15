@@ -30,10 +30,8 @@ public class RestAvito {
         JSONObject jsonObject = new JSONObject(json);
 
 
-        Message message = new Message(  jsonObject.getString("text"), jsonObject.getString("tag"),user);
 
-
-        messageRepository.save(message );
+        messageRepository.save(new Message(jsonObject.getString("text"), jsonObject.getString("tag"),user));
     }
 
     @RequestMapping(value = "/list/message",method = GET)
