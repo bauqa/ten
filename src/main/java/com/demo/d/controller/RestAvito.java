@@ -5,7 +5,6 @@ import com.demo.d.model.User;
 import com.demo.d.repositiry.MessageRepository;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,8 +19,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 public class RestAvito {
 
-    @Value("${upload.path}")
-    private String uploadPath;
 
 
     @Autowired
